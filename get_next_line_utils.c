@@ -6,17 +6,19 @@
 /*   By: yhouari <yhouari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/11 15:50:08 by yhouari           #+#    #+#             */
-/*   Updated: 2020/10/04 07:59:10 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/06 13:55:10 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int			ft_strlen(char const *str)
+int			ft_strlen(char *str)
 {
 	int		i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 		i++;
 	return (i);
@@ -38,7 +40,7 @@ int			ft_endline(char *str)
 	return (1);
 }
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char *s1, char *s2)
 {
 	char	*dest;
 	int		i;
@@ -61,5 +63,6 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	while (s2[j])
 		dest[i++] = s2[j++];
 	dest[i] = '\0';
+	free(s1);
 	return (dest);
 }

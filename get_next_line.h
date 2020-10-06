@@ -6,7 +6,7 @@
 /*   By: yhouari <yhouari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 10:21:50 by yhouari           #+#    #+#             */
-/*   Updated: 2020/10/06 10:21:53 by yhouari          ###   ########.fr       */
+/*   Updated: 2020/10/06 13:54:59 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 char	*ft_next_line(char *str);
 char	*ft_line(char *str);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 
-int		ft_strlen(char const *str);
+int		ft_strlen(char *str);
 int		ft_endline(char *str);
 int		get_next_line(int fd, char **line);
 
